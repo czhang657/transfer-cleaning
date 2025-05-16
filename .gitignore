@@ -1,0 +1,7 @@
+*.log
+
+currency
+stock
+
+*.pyc
+__pycache__/
