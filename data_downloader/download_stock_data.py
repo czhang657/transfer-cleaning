@@ -5,7 +5,7 @@ import requests
 from time import sleep
 
 # === Configuration ===
-output_dir = "stock/stock_data"
+output_dir = "default_setup_transfer_cleaning/stock/stock_data"
 os.makedirs(output_dir, exist_ok=True)
 
 # Set how many tickers to download (e.g., 100 for testing). Set to None to download all.
