@@ -1,0 +1,6 @@
+{
+    "best_epoch": 421,
+    "best_val_loss": 521.86328125,
+    "best_tr_loss": 716.9683837890625,
+    "best_test_loss": 705.83447265625
+}

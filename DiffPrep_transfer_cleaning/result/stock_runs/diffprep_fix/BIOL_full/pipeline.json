@@ -1,0 +1,26 @@
+{
+    "num_tf": [
+        "MICE",
+        "mean",
+        "KNN",
+        "KNN",
+        "mean",
+        "KNN",
+        "mode",
+        "MICE",
+        "mean",
+        "KNN"
+    ],
+    "normalization": [
+        "ZS",
+        "MM",
+        "ZS",
+        "MM",
+        "RS",
+        "ZS",
+        "ZS",
+        "MA",
+        "ZS",
+        "ZS"
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "num_epochs": 2000,
+    "batch_size": 512,
+    "device": "cpu",
+    "weight_decay": 0,
+    "model": "log",
+    "train_seed": 1,
+    "split_seed": 1,
+    "method": "diffprep_fix",
+    "save_model": true,
+    "logging": false,
+    "no_crash": false,
+    "patience": 2000,
+    "momentum": 0.9,
+    "prep_lr": null,
+    "temperature": 0.1,
+    "grad_clip": null,
+    "pipeline_update_sample_size": 512,
+    "init_method": "default",
+    "diff_method": "num_diff",
+    "sample": false,
+    "model_lr": 0.1,
+    "prep_pipeline": {
+        "num_tf": [
+            "MICE",
+            "MICE",
+            "mode",
+            "MICE",
+            "MICE",
+            "MICE",
+            "MICE",
+            "mode",
+            "MICE",
+            "mode"
+        ],
+        "normalization": [
+            "MA",
+            "MA",
+            "MA",
+            "MA",
+            "ZS",
+            "MA",
+            "MA",
+            "MA",
+            "RS",
+            "MA"
+        ],
+        "cleaning_outliers": [
+            "identity",
+            "identity",
+            "identity",
+            "identity",
+            "MAD_2",
+            "identity",
+            "identity",
+            "identity",
+            "identity",
+            "identity"
+        ],
+        "discretization": [
+            "quantile_20",
+            "quantile_20",
+            "quantile_20",
+            "quantile_20",
+            "identity",
+            "quantile_20",
+            "quantile_20",
+            "uniform_20",
+            "quantile_20",
+            "quantile_20"
+        ]
+    }
+}

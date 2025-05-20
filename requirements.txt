@@ -1,0 +1,13 @@
+impyute==0.0.8
+matplotlib==3.7.2
+model==0.6.0
+numpy==1.24.3
+optuna==4.3.0
+pandas==2.0.3
+Requests==2.32.3
+scikit-learn==1.3.0
+scipy==1.15.3
+seaborn==0.13.2
+torch==2.7.0
+tqdm==4.65.0
+yfinance==0.2.61

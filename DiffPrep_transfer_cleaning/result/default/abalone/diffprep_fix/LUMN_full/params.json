@@ -1,0 +1,73 @@
+{
+    "num_epochs": 2000,
+    "batch_size": 512,
+    "device": "cpu",
+    "weight_decay": 0,
+    "model": "log",
+    "train_seed": 1,
+    "split_seed": 1,
+    "method": "diffprep_fix",
+    "save_model": true,
+    "logging": false,
+    "no_crash": false,
+    "patience": 2000,
+    "momentum": 0.9,
+    "prep_lr": null,
+    "temperature": 0.1,
+    "grad_clip": null,
+    "pipeline_update_sample_size": 512,
+    "init_method": "default",
+    "diff_method": "num_diff",
+    "sample": false,
+    "model_lr": 0.1,
+    "prep_pipeline": {
+        "num_tf": [
+            "KNN",
+            "median",
+            "MICE",
+            "MICE",
+            "MICE",
+            "mean",
+            "median",
+            "mode",
+            "mode",
+            "median"
+        ],
+        "normalization": [
+            "MA",
+            "MA",
+            "ZS",
+            "MA",
+            "ZS",
+            "ZS",
+            "ZS",
+            "RS",
+            "ZS",
+            "RS"
+        ],
+        "cleaning_outliers": [
+            "MAD_2",
+            "identity",
+            "identity",
+            "identity",
+            "MAD_2",
+            "identity",
+            "identity",
+            "identity",
+            "identity",
+            "identity"
+        ],
+        "discretization": [
+            "identity",
+            "quantile_20",
+            "uniform_5",
+            "quantile_5",
+            "identity",
+            "identity",
+            "identity",
+            "identity",
+            "uniform_10",
+            "identity"
+        ]
+    }
+}

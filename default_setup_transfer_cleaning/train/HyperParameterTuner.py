@@ -1,4 +1,3 @@
-
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.tree import DecisionTreeClassifier
@@ -11,7 +10,7 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.svm import SVC
 import numpy as np
-from xgboost import XGBRegressor
+# from xgboost import XGBRegressor
 import optuna
 import logging
 import pandas as pd
@@ -200,28 +199,7 @@ class HyperParameterTuner():
             self.cached_hyperparameter_results['linear_regression'] = clf.best_params_
             self.logger.info("The Best Parameters for Linear Regression are: ", clf.best_params_)
             return np.sqrt(mean_squared_error(self.y_test, y_pred))
-        # # # Flatten y_test if necessary
-        # y_pred_flat = y_pred.ravel() if len(y_pred.shape) > 1 else y_pred
-        # y_test_flat = self.y_test.values.ravel() if hasattr(self.y_test, 'values') else self.y_test.ravel()
-
-        # # Prepare data for saving
-        # results_df = pd.DataFrame({
-        #     'Prediction': y_pred_flat,
-        #     'Actual': y_test_flat
-        # })
-
-        # output_file = "print_out_results2.csv"
-        # # Save to CSV (append if file exists, else create new)
-        # if os.path.exists(output_file):
-        #     results_df.to_csv(output_file, mode='a', header=False, index=False)
-        # else:
-        #     results_df.to_csv(output_file, mode='w', index=False)
-
-        # print(f"Results saved to {output_file}")
-
-        # # Calculate and return RMSE
-        # return np.sqrt(mean_squared_error(y_test_flat, y_pred))
-
+            
     def run_ridge_regression_model_with_optimal_hyperparameters(self):
         if len(self.cached_hyperparameter_results['ridge_regression']) > 0:
             model = Ridge(**self.cached_hyperparameter_results['ridge_regression'])
@@ -317,22 +295,6 @@ class HyperParameterTuner():
 
         # Make predictions on the test set
         y_pred_test = xgb_best.predict(self.X_test)
-        # # Flatten y_test if necessary to make it 1-dimensional
-        # y_test_flat = self.y_test.values.ravel() if len(self.y_test.shape) > 1 else self.y_test
-
-        # # Prepare data for saving
-        # results_df = pd.DataFrame({
-        #     'Prediction': y_pred_test,
-        #     'Actual': y_test_flat
-        # })
-        # output_file = 'print_out_results3.csv'
-        # # Save to CSV (append if file exists, else create new)
-        # if os.path.exists(output_file):
-        #     results_df.to_csv(output_file, mode='a', header=False, index=False)
-        # else:
-        #     results_df.to_csv(output_file, mode='w', index=False)
-
-        # print(f"Results saved to {output_file}")
 
         # Calculate RMSE on the test set
         return np.sqrt(mean_squared_error(self.y_test, y_pred_test))

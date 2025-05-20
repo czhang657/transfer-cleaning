@@ -1,7 +1,9 @@
 *.log
 
-currency
-stock
+default_setup_transfer_cleaning/currency
+default_setup_transfer_cleaning/stock
+DiffPrep_transfer_cleaning/data
+DiffPrep_transfer_cleaning/stock
 
 *.pyc
 __pycache__/

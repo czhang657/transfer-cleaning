@@ -1,0 +1,50 @@
+{
+    "num_tf": [
+        "MICE",
+        "MICE",
+        "KNN",
+        "MICE",
+        "MICE",
+        "MICE",
+        "median",
+        "KNN",
+        "KNN",
+        "KNN"
+    ],
+    "normalization": [
+        "RS",
+        "MM",
+        "MM",
+        "ZS",
+        "ZS",
+        "ZS",
+        "ZS",
+        "ZS",
+        "RS",
+        "ZS"
+    ],
+    "cleaning_outliers": [
+        "identity",
+        "identity",
+        "identity",
+        "identity",
+        "ZS_2",
+        "identity",
+        "identity",
+        "identity",
+        "MAD_2.5",
+        "identity"
+    ],
+    "discretization": [
+        "quantile_5",
+        "identity",
+        "identity",
+        "identity",
+        "identity",
+        "uniform_5",
+        "identity",
+        "identity",
+        "identity",
+        "identity"
+    ]
+}

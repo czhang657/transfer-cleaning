@@ -1,7 +1,7 @@
 import yfinance as yf
 import os
 
-output_folder = 'currency/currency_data'
+output_folder = 'default_setup_transfer_cleaning/currency/currency_data'
 os.makedirs(output_folder, exist_ok=True)
 
 currency_symbols = [
