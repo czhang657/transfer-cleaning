@@ -61,4 +61,4 @@ python run.py
 
 ## Project Status
 
-This repository accompanies an ongoing research project currently under submission. We welcome feedback and suggestions as we continue to improve the framework and expand its applications.
+This repository accompanies a research project currently under submission. We welcome feedback and suggestions as we continue to improve the framework and expand its applications.
